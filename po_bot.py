@@ -80,9 +80,11 @@ options.set_capability('goog:loggingPrefs', {'performance': 'ALL'})
 options.add_argument('--ignore-ssl-errors')
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--ignore-certificate-errors-spki-list')
-options.add_argument(r'--user-data-dir=/Users/vitaly/Library/Application Support/Google/Chrome/Default')
+options.add_argument(r"C:\Users\Xr\AppData\Local\Google\Chrome\User Data")
+# options.add_argument(r'--user-data-dir=/Users/vitaly/Library/Application Support/Google/Chrome/Default')
 # chromedriver can be downloaded from here: https://googlechromelabs.github.io/chrome-for-testing/
-service = Service(executable_path=r'/Users/vitaly/Downloads/chromedriver-mac-arm64/chromedriver')
+service = Service(executable_path=r"C:\Users\Xr\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe")
+#service = Service(executable_path=r'/Users/vitaly/Downloads/chromedriver-mac-arm64/chromedriver')
 driver = webdriver.Chrome(options=options, service=service)
 companies = {
     'Apple OTC': '#AAPL_otc',
